@@ -38,7 +38,8 @@
   #define SVO_WARN_STREAM_THROTTLE(rate, x) ROS_WARN_STREAM_THROTTLE(rate, x)
   #define SVO_ERROR_STREAM(x) ROS_ERROR_STREAM(x)
 #else
-  #define SVO_INFO_STREAM(x) std::cerr<<"\033[0;0m[INFO] "<<x<<"\033[0;0m"<<std::endl;
+  #define SVO_INFO_STREAM(x) ;
+//#define SVO_INFO_STREAM(x) std::cerr<<"\033[0;0m[INFO] "<<x<<"\033[0;0m"<<std::endl;
   #ifdef SVO_DEBUG_OUTPUT
     #define SVO_DEBUG_STREAM(x) SVO_INFO_STREAM(x)
   #else
